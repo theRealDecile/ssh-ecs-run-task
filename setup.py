@@ -45,7 +45,7 @@ def verify_dependency(executable_name, min_version=None, suffix=None):
 
             if min_version:
                 version_nums = XYZ.split('.')
-                for idx, val in enumerate(str.split(min_version, '.')):
+                for idx, val in enumerate(min_version.split('.')):
                     if idx >= len(version_nums) or int(val) > int(version_nums[idx]):
                         if exit:
                             sys.exit("You must upgrade %s to %s or higher" % (executable_name, min_version))
