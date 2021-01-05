@@ -44,7 +44,7 @@ def verify_dependency(executable_name, min_version=None, suffix=None):
                 sys.exit("Could not determine version of %s" % executable_name)
 
             if min_version:
-                version_nums = str.split(XYZ, '.')
+                version_nums = XYZ.split('.')
                 for idx, val in enumerate(str.split(min_version, '.')):
                     if idx >= len(version_nums) or int(val) > int(version_nums[idx]):
                         if exit:
